@@ -18,7 +18,7 @@ class morseTree():
                     if currentNode.right==None:
                         currentNode.right=node()
                     currentNode=currentNode.right
-            currentNode.data=chr(97+i)
+            currentNode.data=chr(97+i)             #아스키코드 97:a
     def decoding(self,letter):
         result=''
         currentNode=self.root
@@ -29,8 +29,8 @@ class morseTree():
                 currentNode=currentNode.right
             else:
                 result+=currentNode.data
-                currentNode=self.root
-        result+=currentNode.data
+                currentNode=self.root         #단어 종료시마다 다시 탐색을 위해 루트노드로 이동
+        result+=currentNode.data              #letter 마지막은 그냥 종료되기에 최종값 더하기
         return result
             
 morse = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
