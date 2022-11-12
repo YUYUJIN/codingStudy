@@ -8,4 +8,4 @@ for _ in range(n):
 
 for i in range(10000):
     for j in range(nums[i]):
-        print(i)
+        print(i+1)
