@@ -14,6 +14,8 @@ class checker:
             else:
                 self.backword=c+self.backword
     def check(self,s):
+        if len(s)<len(self.forword)+len(self.backword):
+            return 'NE'
         for i in range(len(s)):
             if i<len(self.forword):
                 if s[i]!=self.forword[i]:
