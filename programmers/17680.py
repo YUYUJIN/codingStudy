@@ -21,5 +21,3 @@ def solution(cacheSize, cities):
             cache.pop(0)
     
     return runtime
-
-print(solution(3,["Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul"]))
